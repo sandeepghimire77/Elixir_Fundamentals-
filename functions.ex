@@ -89,7 +89,31 @@ defmodule M do
     else
       IO.puts "Can't drink at all . Sorry :("
     end
+#unless
+    unless ages === 18 do
+      IO.puts "You're not 18"
+    else
+      IO.puts "You're 18"
+    end
 
+#conditional works like the else if . it only works with the first match
+
+    cond do
+          ages >= 14 -> IO.puts "You can wait"
+          ages >= 16 -> IO.puts "You can drive"
+          ages >= 18 -> IO.puts "You can vote"
+          true -> IO.puts "Default"
+        end
+
+# case works like a switch
+        case 10 do
+      100 -> IO.puts "The number is 100"
+      200 -> IO.puts "the number is 200 "
+      _ -> IO.puts "Default"
+    end
+
+# Ternary operators concept 
+     IO.puts "Ternary : #{if ages > 18, do: "Can Vote", else: "Can't Vote"}"
 
 
 
