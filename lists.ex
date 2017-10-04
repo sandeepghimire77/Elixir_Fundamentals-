@@ -39,17 +39,18 @@ def liststuff do
 
       # we can force inspect to print as a list
       # like this
-      IO.inspect [97,98], char_lists: :as_lists
+     IO.inspect [97,98], char_lists: :as_lists
 
       # Enum can enumerate over lists
       Enum.each tail, fn item ->
         IO.puts item
       end
 
-      words = ["Random", "Words", "in a", "list"]
-      Enum.each words, fn word ->
-        IO.puts word
-      end
+
+
+    #we can create a list of key value tuplesstuff
+    My_stat5 = [name: "sandeep" , height: 6.15, weight: 175]
+    IO.puts "My_stats are #{My_stats}"
 
 
 
