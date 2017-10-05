@@ -49,6 +49,32 @@ capitals1 = %{germany:  "Berlin",
     add_sum.({1,2,3})
 
 
+    # ----- ENUMERABLES -----
+        # An enumerable can have its items
+        # counted off
+
+        # Check if all values are even
+        IO.puts "Even List : #{Enum.all?([1,2,3],
+        fn(n) -> rem(n,2) == 0 end)}"
+
+        # Check if any items are even
+        IO.puts "Even Item : #{Enum.any?([1,2,3],
+        fn(n) -> rem(n,2) == 0 end)}"
+
+        # Print out each item
+        Enum.each([1,2,3], fn(n) -> IO.puts n end)
+
+        # Double each value in a list
+        dbl_list = Enum.map([1,2,3], fn(n) -> n * 2 end)
+        IO.inspect dbl_list
+
+        # Reduce down to a single value
+        sum_vals = Enum.reduce([1,2,3], fn(n, sum) -> n + sum end)
+        IO.puts "Sum : #{sum_vals}"
+        # this helps to eradicate any value that is double written . example here its 2
+        IO.inspect Enum.uniq([1,2,2])
+
+
 
 
 
